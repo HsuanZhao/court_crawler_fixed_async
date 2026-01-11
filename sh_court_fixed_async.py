@@ -142,7 +142,7 @@ class FixedAsyncCourtCrawler:
                         
                         # 构建详情页URL
                         if detail_param:
-                            base_url = "https://www.XXXXX.XX.cn/XXXX/web/flws_view.jsp"
+                            base_url = "https://www.XXXXX.XX.cn/XXXX/web/flws_view.jsp" #注意要替换网址
                             case_data['detail_url'] = f"{base_url}?pa={detail_param}"
                         else:
                             case_data['detail_url'] = ""
@@ -391,3 +391,4 @@ async def main():
 if __name__ == "__main__":
 
     asyncio.run(main())
+
