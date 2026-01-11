@@ -58,9 +58,9 @@
    【反爬技术】：多层嵌套表格结构，无规律的行ID生成
    【破解方法】：使用多种选择器策略和多级容错
    【代码示例】：
-   # 通过ID选择
+   通过ID选择
    row_selector = f'tr[id="{case_data["row_id"]}"]'
-   # 通过案号文本选择（备选）
+   通过案号文本选择（备选）
    text_selector = f'text="{case_number_text}"'
 
 6. 请求频率限制 ⏱️
