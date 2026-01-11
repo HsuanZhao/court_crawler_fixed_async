@@ -1,6 +1,6 @@
 """
-上海市高级人民法院文书抓取工具（修复异步错误版）
-使用方法：python sh_court_fixed_async.py
+某市高级人民法院文书抓取工具（修复异步错误版）
+使用方法：python court_fixed_async.py
 """
 
 import asyncio
@@ -142,7 +142,7 @@ class FixedAsyncCourtCrawler:
                         
                         # 构建详情页URL
                         if detail_param:
-                            base_url = "https://www.hshfy.sh.cn/shfy/web/flws_view.jsp"
+                            base_url = "https://www.XXXXX.XX.cn/XXXX/web/flws_view.jsp"
                             case_data['detail_url'] = f"{base_url}?pa={detail_param}"
                         else:
                             case_data['detail_url'] = ""
@@ -275,7 +275,7 @@ class FixedAsyncCourtCrawler:
     async def run(self, start_url):
         """主运行流程"""
         print("=" * 50)
-        print("上海市高级人民法院文书抓取（修复异步版）")
+        print("某市高级人民法院文书抓取（修复异步版）")
         print("=" * 50)
         
         playwright = None
@@ -389,4 +389,5 @@ async def main():
     await crawler.run(config['start_url'])
 
 if __name__ == "__main__":
+
     asyncio.run(main())
