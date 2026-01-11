@@ -1,17 +1,17 @@
-上海市高级人民法院文书抓取工具
+某市高级人民法院文书抓取工具
 ================================
 
 项目简介
 ---------
-本工具用于抓取上海市高级人民法院网站（https://www.hshfy.sh.cn）的公开裁判文书数据。
+本工具用于抓取某市高级人民法院网站（https://www.XXXXX.XX.cn）的公开裁判文书数据。
 包含两个主要脚本：
-- sh_court_fixed_async.py：主抓取程序，实现异步数据抓取
+- court_fixed_async.py：主抓取程序，实现异步数据抓取
 - debug_page_structure.py：页面诊断工具，用于分析网站结构
 
 主要功能
 ---------
-1. 主抓取程序 (sh_court_fixed_async.py)
-   - 自动访问上海市高级人民法院文书查询页面
+1. 主抓取程序 (court_fixed_async.py)
+   - 自动访问某市高级人民法院文书查询页面
    - 模拟表单提交获取文书列表
    - 提取文书基本信息（案号、标题、文书类型、案由、审判部门、审级、结案日期等）
    - 打开详情页获取完整文书内容
@@ -93,7 +93,7 @@ pandas>=2.0.0
 【配置说明】：
 主程序配置参数：
 config = {
-    'start_url': 'https://www.hshfy.sh.cn/shfy/gweb2017/flws_list_new.jsp?ajlb=aYWpsYj3QzMrCz',
+    'start_url': 'https://www.XXXXX.XX.cn/XXXX/gweb2017/flws_list_new.jsp?ajlb=aYWpsYj3QzMrCz',
     'headless': False,  # 调试时建议设为False
     'max_cases': 9,     # 测试数量
     'output_dir': '抓取结果'
@@ -136,7 +136,7 @@ config = {
 文件结构
 ---------
 项目目录/
-├── sh_court_fixed_async.py    # 主抓取程序
+├── court_fixed_async.py    # 主抓取程序
 ├── debug_page_structure.py    # 页面诊断工具
 ├── README.md                  # 说明文档
 ├── 抓取结果/                  # 数据输出目录
